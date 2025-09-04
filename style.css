@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Theme Variables */
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --primary: #6c63ff;
+  --secondary: #f5f5f5;
+}
+
+.dark-mode {
+  --bg: #121212;
+  --text: #ffffff;
+  --primary: #9a86fd;
+  --secondary: #1e1e1e;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--secondary);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem; 
+}
+
+.nav-actions .btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: cornsilk;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#theme-toggle {
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color:var(--text);
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--primary);
+  /* color: 
+  var(--primary);
+ */
+ color: white;
+  background: linear-gradient(135deg, #6c63ff, #9a86fd);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #6c63ff, #9a86fd);
+  color: white;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features .feature-cards,
+.pricing .pricing-cards,
+.testimonials .testimonial-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card, .plan {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover, .plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan.popular {
+  border: 2px solid var(--primary);
+}
+.plan {
+  border: 2px solid var(--primary);
+}
+
+/* Contact */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: var(--secondary);
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+
+body.dark-theme {
+  background: #181818;
+  color: #f1f1f1;
+}
+
+body.dark-theme .navbar,
+body.dark-theme .footer {
+  background: #222;
+  color: #f1f1f1;
+}
+
